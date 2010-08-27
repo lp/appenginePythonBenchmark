@@ -1,0 +1,206 @@
+#!/Users/lpperron/Documents/lllaptop/git_repos/python/appengine_api/speedtest/speedtest/bin/python
+
+'''
+A simple WSGI webserver for testing Breve templates.
+'''
+
+import sys
+from optparse import OptionParser
+from wsgiref.simple_server import make_server
+import cgitb; cgitb.enable ( )
+from urlparse import urlparse
+from mimetypes import guess_type
+import os, sys
+import logging
+
+from breve import Template, Namespace
+from breve.tags import html
+from breve.loaders import FileLoader
+
+logger = logging.getLogger ( __name__ )
+
+def reconstruct_url ( environ ):
+    # From WSGI spec, PEP 333
+    from urllib import quote
+    url = environ [ 'wsgi.url_scheme' ] + '://'
+    if environ.get ( 'HTTP_HOST' ): url += environ [ 'HTTP_HOST' ]
+    else:
+        url += environ [ 'SERVER_NAME' ] 
+        if environ [ 'wsgi.url_scheme' ]  == 'https':
+            if environ [ 'SERVER_PORT' ]  != '443':
+               url += ':' + environ [ 'SERVER_PORT' ] 
+        else:
+            if environ [ 'SERVER_PORT' ]  != '80':
+               url += ':' + environ [ 'SERVER_PORT' ] 
+    url += quote ( environ.get ( 'SCRIPT_NAME',''))
+    url += quote ( environ.get ( 'PATH_INFO','')).replace ( url.replace ( ':', '%3A'), '')
+    if environ.get ( 'QUERY_STRING'):
+        url += '?' + environ [ 'QUERY_STRING' ] 
+    environ [ 'reconstructed_url' ]  = url
+    return url
+
+
+class WSGIFileServerApplication ( object ):
+    """Application to serve out windmill provided"""
+
+    #   Copyright (c) 2006-2007 Open Source Applications Foundation
+    #
+    #   Licensed under the Apache License, Version 2.0 (the "License");
+    #   you may not use this file except in compliance with the License.
+    #   You may obtain a copy of the License at
+    #
+    #       http://www.apache.org/licenses/LICENSE-2.0
+    #
+    #   Unless required by applicable law or agreed to in writing, software
+    #   distributed under the License is distributed on an "AS IS" BASIS,
+    #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    #   See the License for the specific language governing permissions and
+    #   limitations under the License.
+    
+    def __init__ ( self, root_path, mount_point=None ) :
+        self.path = os.path.abspath ( os.path.expanduser ( root_path) ) 
+        self.mount_point = mount_point
+        
+    def handler ( self, environ, start_response ) :
+        """Application to serve out windmill provided"""
+        url = urlparse ( reconstruct_url ( environ )  ) 
+        
+        if self.mount_point is not None:
+            split_url = url.path.split ( self.mount_point, 1 ) 
+            serve_file = split_url [ 1 ] 
+        else:
+            serve_file = url.path
+        
+        serve_file = serve_file.replace ( '%20', ' ' ) 
+        
+        def do_get ( ):
+            if serve_file.endswith ( '/' )  or os.path.isdir ( os.path.join ( self.path, serve_file ) ):
+                if os.path.isdir ( os.path.join ( self.path, serve_file ) ):
+                    start_response ( '200 OK', [ ( 'Cache-Control', 'no-cache' ), ( 'Pragma','no-cache' ) ,
+                                                 ( 'Content-Type', 'text/html; charset=utf-8' ) ] )
+                    return [ 
+                        '<html>' + 
+                        '<br>'.join ( [ '<a href="%s/%s">%s</a>' % ( serve_file.replace ( filename, '' ), filename, filename )  
+                                        for filename in os.listdir ( os.path.join ( self.path, serve_file ) ) ] )
+                        + '</html>' 
+                    ]
+                else:
+                    logger.error ( 'failed to list directory %s/%s' %  ( self.path, serve_file ) )
+                    start_response ( '404 Not found', [ ( 'Content-Type', 'text/plain') ] )
+                    return ['404 Not Found' ] 
+            
+            try:
+                if os.name == 'nt' or sys.platform == 'cygwin':
+                    f = open ( os.path.join ( self.path, serve_file ), 'rb' ) 
+                else:
+                    f = open ( os.path.join ( self.path, serve_file ), 'r' ) 
+                logger.debug ( 'opened file %s' % serve_file ) 
+            except IOError:
+                logger.error ( 'failed to open file %s/%s' %  ( self.path, serve_file ) )
+                start_response ( '404 Not found', [ ( 'Content-Type', 'text/plain') ] )
+                return [ '404 Not Found' ] 
+
+            start_response ( '200 OK', [ ( 'Cache-Control', 'no-cache' ),  ( 'Pragma','no-cache' ),
+                                         ( 'Content-Type', self.guess_content_type ( environ['PATH_INFO' ] ) ) ] )
+            return [ f.read ( ) ] 
+            
+        def do_put ( ):
+            #Write file
+            try:
+                f = open ( os.path.join ( self.path, serve_file ) , 'w' ) 
+                logger.debug ( 'opened file for writing %s' % serve_file ) 
+            except:
+                logger.error ( 'failed to open file for writiing %s/%s' %  ( self.path, serve_file ) )
+                start_response ( '403 Forbidden', [ ( 'Content-Type', 'text/plain' ) ] )
+                return ['403 Forbidden' ] 
+            
+            f.write ( environ [ 'wsgi.input' ] .read ( ) )
+            
+        def do_mkcollection ( ):
+            pass
+            
+        http_method_map = { 'GET': do_get, 'PUT': do_put, 'MKCOLLECTION': do_mkcollection }
+        return http_method_map[environ['REQUEST_METHOD' ]  ]  ( )
+            
+    def guess_content_type ( self, path_info ) :
+        """Make a best guess at the content type"""
+        _type, _enc = guess_type ( path_info )
+        return _type
+            
+    def __call__ ( self, environ, start_response ) :
+        return self.handler ( environ, start_response ) 
+
+
+class BreveApp ( object ):
+
+    def __init__ ( self, options, args ):
+        self.fileserver = WSGIFileServerApplication ( options.document_root, '/' )
+        self.options = options
+        self.loader = FileLoader ( )
+
+    def __call__ ( self, environ, start_response ):
+        uri = environ [ 'PATH_INFO' ].lstrip ( '/' )
+        if not uri:
+            uri = self.options.index
+            
+        template = "%s.%s" % ( uri, Template.extension )
+        try:
+            self.loader.stat ( template, self.options.template_root )
+        except OSError:
+            return self.fileserver ( environ, start_response )
+
+        vars = { }
+        if self.options.variables:
+            pythonpath, modname = os.path.split ( self.options.variables )
+            sys.path.insert ( 0, pythonpath )
+            mod, ext = os.path.splitext ( modname )
+            module = __import__ ( mod, fromlist = '*' )
+            for k in dir ( module ):
+                if not k.startswith ( '__' ):
+                    vars [ k ] = module.__dict__ [ k ]
+            
+        t = Template ( html.tags, 
+                       xmlns = html.xmlns,
+                       doctype = html.doctype,
+                       root = self.options.template_root, 
+                       namespace = self.options.namespace,
+                       debug = self.options.debug,
+                       tidy = self.options.tidy,
+                       autotags = self.options.autotags )
+        try:
+            result = t.render ( uri, vars ).encode ( 'utf-8' )
+        except:
+            status = '500 Internal Server Error'
+            result = cgitb.html ( sys.exc_info ( ) )
+        else:
+            status = '200 OK'
+        
+        response_headers = [ ( 'Content-type', 'text/html' ) ]
+        start_response ( status, response_headers )
+
+        return result
+
+
+if __name__ == '__main__':    
+
+    parser = OptionParser ( )
+    parser.add_option ( "-p", "--port", dest="port", default=9999, help="Listen on port", metavar="PORT" )
+    parser.add_option ( "-b", "--bind", dest="interface", default='127.0.0.1', help="Listen on interface", metavar="ADDRESS" )
+    parser.add_option ( "-t", "--templates", dest="template_root", default='.', help="Location of templates", metavar="PATH" )
+    parser.add_option ( "-d", "--docroot", dest="document_root", default='.', help="Location of static files", metavar="PATH" )
+    parser.add_option ( "-i", "--index", dest="index", default='index', help="Default template to serve", metavar="NAME" )
+    parser.add_option ( "-n", "--namespace", dest="namespace", default='', help="Namespace to use for variables", metavar="NAME" )
+    parser.add_option ( "-v", "--vars", dest="variables", help="Python module of template variables", metavar="PATH" )
+    parser.add_option ( "-a", "--autotags", dest="autotags", help="Enable AutoTag features", metavar="NAME" )
+    parser.add_option ( "-D", "--debug", dest="debug", action="store_true", help="Enable Template debug mode", default=False )
+    parser.add_option ( "-T", "--tidy", dest="tidy", action="store_true", help="Enable Tidy mode (requires tidy)", default=False )
+    options, args = parser.parse_args ( )
+
+    httpd = make_server ( options.interface, int ( options.port ), BreveApp ( options, args ) )
+    print "Serving on %s:%s..." % ( options.interface, options.port )
+    
+    try:
+        httpd.serve_forever ( )
+    except KeyboardInterrupt:
+        print "Halting by user intervention"
+        raise SystemExit

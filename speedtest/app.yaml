@@ -1,0 +1,112 @@
+application: templatesbench
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /bottlesimpletemplate/.*
+  script: /app/bottle/bottleTest.py
+  
+- url: /bottledjango/.*
+  script: /app/bottleDjango/bottleTestDjango.py
+  
+- url: /bottlemako/.*
+  script: /app/bottleMako/bottleTestMako.py
+  
+- url: /bottlejinja/.*
+  script: /app/bottleJinja/bottleTestJinja.py
+  
+- url: /bottletenjin/.*
+  script: /app/bottleTenjin/bottleTenjinTest.py
+  
+- url: /bottlebreve/.*
+  script: /app/bottleBreve/bottleBreveTest.py
+  
+- url: /bottletemplator/.*
+  script: /app/bottleTemplator/bottleTestTemplator.py
+  
+- url: /webpytemplator/.*
+  script: /app/webpy/webpyTest.py
+  
+- url: /webpydjango/.*
+  script: /app/webpyDjango/webpyTestDjango.py
+  
+- url: /webpyjinja/.*
+  script: /app/webpyjinja/webpyJinjaTest.py
+  
+- url: /webpymako/.*
+  script: /app/webpymako/webpyMakoTest.py
+  
+- url: /webpybreve/.*
+  script: /app/webpybreve/webpyBreveTest.py
+  
+- url: /webpysimpletemplate/.*
+  script: /app/webpySimpleTemplate/webpyTestSimpleTemplate.py
+  
+- url: /webpytenjin/.*
+  script: /app/webpytenjin/webpyTenjinTest.py
+  
+- url: /webappdjango/.*
+  script: /app/gnative/gnative.py
+  
+- url: /webappmako/.*
+  script: /app/gmako/gmako.py
+  
+- url: /webappjinja/.*
+  script: /app/gjinja/gjinja.py
+  
+- url: /webappsimpletemplate/.*
+  script: /app/gSimpleTemplate/gTestSimpleTemplate.py
+  
+- url: /webapptenjin/.*
+  script: /app/gtenjin/gTenjinTest.py
+  
+- url: /webapptemplator/.*
+  script: /app/gtemplator/gTestTemplator.py
+  
+- url: /webappbreve/.*
+  script: /app/gbreve/gBreveTest.py
+  
+- url: /flaskjinja/.*
+  script: /app/flask/flaskTest.py
+  
+- url: /flaskdjango/.*
+  script: /app/flaskDjango/flaskTestDjango.py
+  
+- url: /flaskmako/.*
+  script: /app/flaskmako/flaskTestMako.py
+  
+- url: /flasksimpletemplate/.*
+  script: /app/flaskSimpleTemplate/flaskTestSimpleTemplate.py
+  
+- url: /flasktenjin/.*
+  script: /app/flaskTenjin/flaskTenjinTest.py
+  
+- url: /flasktemplator/.*
+  script: /app/flaskTemplator/flaskTestTemplator.py
+  
+- url: /flaskbreve/.*
+  script: /app/flaskBreve/flaskBreveTest.py
+  
+- url: /tipfyjinja/.*
+  script: /app/tipfy/tipfyTest.py
+  
+- url: /tipfydjango/.*
+  script: /app/tipfyDjango/tipfyTestDjango.py
+  
+- url: /tipfymako/.*
+  script: /app/tipfymako/tipfyTestMako.py
+  
+- url: /tipfysimpletemplate/.*
+  script: /app/tipfySimpleTemplate/tipfyTestSimpleTemplate.py
+  
+- url: /tipfytenjin/.*
+  script: /app/tipfyTenjin/tipfyTenjinTest.py
+  
+- url: /tipfytemplator/.*
+  script: /app/tipfyTemplator/tipfyTestTemplator.py
+  
+- url: /tipfybreve/.*
+  script: /app/tipfyBreve/tipfyBreveTest.py
+  
+  
