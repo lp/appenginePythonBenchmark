@@ -1,14 +1,14 @@
 h1. Appengine's Python Templates and Frameworks Benchmark
 
-h3. testScriptOverall.rb
+h3. "testScriptOverall.rb":http://github.com/lp/appenginePythonBenchmark/blob/master/testScriptOverall.rb
 
 p. The benchmark runner.
 
-h3. speedtest/
+h3. "speedtest/":http://github.com/lp/appenginePythonBenchmark/tree/master/speedtest/
 
 p. The AppEngine runnable benchmark implementation.
 
-h3. speedtest/app/
+h3. "speedtest/app/":http://github.com/lp/appenginePythonBenchmark/tree/master/speedtest/app/
 
 p. The different implementation combinations.
 
