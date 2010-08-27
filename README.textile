@@ -4,9 +4,13 @@ h3. testScriptOverall.rb
 
 p. The benchmark runner.
 
-h3. speedtest/.
+h3. speedtest/
 
-p. The AppEngine runnable benchmark implementations.
+p. The AppEngine runnable benchmark implementation.
+
+h3. speedtest/app/
+
+p. The different implementation combinations.
 
 h3. License Terms:
 
