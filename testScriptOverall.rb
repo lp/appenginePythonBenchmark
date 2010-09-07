@@ -92,11 +92,26 @@ $results = {
   'tipfymako' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Mako"},
   'tipfysimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/SimpleTemplate"},
   'tipfytenjin' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Tenjin"},
-  'tipfytemplator' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Templator"}
+  'tipfytemplator' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Templator"},
+  'webobjinja' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Jinja"},
+  'webobbreve' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Breve"},
+  'webobdjango' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Django"},
+  'webobmako' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Mako"},
+  'webobsimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "webop w/SimpleTemplate"},
+  'webobtenjin' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Tenjin"},
+  'webobtemplator' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Templator"},
+  'wsgijinja' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Jinja"},
+  'wsgibreve' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Breve"},
+  'wsgidjango' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Django"},
+  'wsgimako' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Mako"},
+  'wsgisimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/SimpleTemplate"},
+  'wsgitenjin' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Tenjin"},
+  'wsgitemplator' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Templator"},
+  'wbbtenjcache' => {:exectime => 0.0, :total => 0.0, :name => "webop w/TenjinCache"}
 }
 
-[10,100,1000,10000].each do |rows|
-  runTest(250,rows)
+[10,100,1000].each do |rows|
+  runTest(25,rows)
 end
 
 puts "Totals:"
@@ -130,7 +145,7 @@ end
 puts
 
 puts "Web Application Frameworks:"
-frames = {"Bottle" => 0.0, "Flask" => 0.0, "webapp" => 0.0, "webpy" => 0.0, "tipfy" => 0.0}
+frames = {"Bottle" => 0.0, "Flask" => 0.0, "webapp" => 0.0, "webpy" => 0.0, "tipfy" => 0.0, "webob" => 0.0, "WSGI" => 0.0}
 $results.each do |k,v|
   frames.each do |ek,ev|
     if k.include? ek.downcase

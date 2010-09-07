@@ -109,4 +109,48 @@ handlers:
 - url: /tipfybreve/.*
   script: /app/tipfyBreve/tipfyBreveTest.py
   
+- url: /webobbreve/.*
+  script: /app/webobBreve/webobTestBreve.py
+  
+- url: /webobdjango/.*
+  script: /app/webobDjango/webobTestDjango.py
+  
+- url: /webobjinja/.*
+  script: /app/webobJinja/webobTestJinja.py
+  
+- url: /webobmako/.*
+  script: /app/webobMako/webobTestMako.py
+  
+- url: /webobsimpletemplate/.*
+  script: /app/webobSimpleTemplate/webobTestSimpleTemplate.py
+  
+- url: /webobtemplator/.*
+  script: /app/webobTemplator/webobTestTemplator.py
+  
+- url: /webobtenjin/.*
+  script: /app/webobTenjin/webobTestTenjin.py
+  
+- url: /wbbtenjcache/.*
+  script: /app/webobTenjinCache/webobTestTenjinCache.py
+  
+- url: /wsgibreve/.*
+  script: /app/wsgiBreve/wsgiTestBreve.py
+  
+- url: /wsgidjango/.*
+  script: /app/wsgiDjango/wsgiTestDjango.py
+  
+- url: /wsgijinja/.*
+  script: /app/wsgiJinja/wsgiTestJinja.py
+  
+- url: /wsgimako/.*
+  script: /app/wsgiMako/wsgiTestMako.py
+  
+- url: /wsgisimpletemplate/.*
+  script: /app/wsgiSimpleTemplate/wsgiTestSimpleTemplate.py
+  
+- url: /wsgitemplator/.*
+  script: /app/wsgiTemplator/wsgiTestTemplator.py
+  
+- url: /wsgitenjin/.*
+  script: /app/wsgiTenjin/wsgiTestTenjin.py
   
