@@ -1,0 +1,27 @@
+Metadata-Version: 1.0
+Name: webapp2
+Version: 0.6
+Summary: Taking Google App Engine's webapp to the next level!
+Home-page: http://www.tipfy.org/
+Author: Rodrigo Moraes
+Author-email: rodrigo.moraes@gmail.com
+License: Apache Software License
+Description: 
+        webapp2
+        ~~~~~~~
+        
+        This is an attempt to improve Google App Engine's
+        `webapp <http://code.google.com/appengine/docs/python/tools/webapp/>`_
+        framework keeping maximum compatibility and same performance.
+        
+        Features overview: http://code.google.com/p/webapp-improved/
+        
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
