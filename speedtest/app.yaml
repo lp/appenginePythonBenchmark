@@ -154,3 +154,24 @@ handlers:
 - url: /wsgitenjin/.*
   script: /app/wsgiTenjin/wsgiTestTenjin.py
   
+- url: /web2django/.*
+  script: /app/g2native/g2native.py
+
+- url: /web2mako/.*
+  script: /app/g2mako/g2mako.py
+
+- url: /web2jinja/.*
+  script: /app/g2jinja/g2jinja.py
+
+- url: /web2simpletemplate/.*
+  script: /app/g2SimpleTemplate/g2TestSimpleTemplate.py
+
+- url: /web2tenjin/.*
+  script: /app/g2tenjin/g2TenjinTest.py
+
+- url: /web2templator/.*
+  script: /app/g2templator/g2TestTemplator.py
+
+- url: /web2breve/.*
+  script: /app/g2breve/g2BreveTest.py
+  

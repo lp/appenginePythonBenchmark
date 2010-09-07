@@ -73,6 +73,14 @@ $results = {
   'webapptenjin' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/Tenjin"},
   'webapptemplator' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/Templator"},
   'webpytemplator' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Templator"},
+  'web2breve' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Breve"},
+  'web2mako' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Mako"},
+  'web2django' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Django"},
+  'web2jinja' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Jinja"},
+  'web2simpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/SimpleTemplate"},
+  'web2tenjin' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Tenjin"},
+  'web2templator' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Templator"},
+  'webpytemplator' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Templator"},
   'webpybreve' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Breve"},
   'webpydjango' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Django"},
   'webpyjinja' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Jinja"},
@@ -145,7 +153,7 @@ end
 puts
 
 puts "Web Application Frameworks:"
-frames = {"Bottle" => 0.0, "Flask" => 0.0, "webapp" => 0.0, "webpy" => 0.0, "tipfy" => 0.0, "webob" => 0.0, "WSGI" => 0.0}
+frames = {"Bottle" => 0.0, "Flask" => 0.0, "webapp" => 0.0, "web2" => 0.0, "webpy" => 0.0, "tipfy" => 0.0, "webob" => 0.0, "WSGI" => 0.0}
 $results.each do |k,v|
   frames.each do |ek,ev|
     if k.include? ek.downcase
