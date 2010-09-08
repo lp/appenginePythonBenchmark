@@ -1,0 +1,325 @@
+Overhead 10:
+    WSGI w/SimpleTemplate: | 250 total, 0 failed |   8.010s overall, 0.032s each | score:   1.000 |
+  webapp w/SimpleTemplate: | 250 total, 0 failed |   8.025s overall, 0.032s each | score:   1.002 |
+           tipfy w/Tenjin: | 250 total, 0 failed |   8.041s overall, 0.032s each | score:   1.004 |
+          bottle w/Tenjin: | 250 total, 0 failed |   8.053s overall, 0.032s each | score:   1.005 |
+       web.py w/Templator: | 250 total, 0 failed |   8.059s overall, 0.032s each | score:   1.006 |
+           webop w/Tenjin: | 250 total, 0 failed |   8.063s overall, 0.032s each | score:   1.007 |
+        flask w/Templator: | 250 total, 0 failed |   8.087s overall, 0.032s each | score:   1.010 |
+            WSGI w/Tenjin: | 250 total, 0 failed |   8.102s overall, 0.032s each | score:   1.011 |
+            flask w/Jinja: | 250 total, 0 failed |   8.125s overall, 0.033s each | score:   1.014 |
+          webapp w/Tenjin: | 250 total, 0 failed |   8.129s overall, 0.033s each | score:   1.015 |
+      webapp2 w/Templator: | 250 total, 0 failed |   8.139s overall, 0.033s each | score:   1.016 |
+           flask w/Tenjin: | 250 total, 0 failed |   8.182s overall, 0.033s each | score:   1.022 |
+         webapp2 w/Django: | 250 total, 0 failed |   8.196s overall, 0.033s each | score:   1.023 |
+          webapp w/Django: | 250 total, 0 failed |   8.196s overall, 0.033s each | score:   1.023 |
+          web.py w/Tenjin: | 250 total, 0 failed |   8.238s overall, 0.033s each | score:   1.028 |
+   tipfy w/SimpleTemplate: | 250 total, 0 failed |   8.285s overall, 0.033s each | score:   1.034 |
+        tipfy w/Templator: | 250 total, 0 failed |   8.286s overall, 0.033s each | score:   1.034 |
+          web.py w/Django: | 250 total, 0 failed |   8.299s overall, 0.033s each | score:   1.036 |
+           web.py w/Breve: | 250 total, 0 failed |   8.329s overall, 0.033s each | score:   1.040 |
+            webop w/Breve: | 250 total, 0 failed |   8.349s overall, 0.033s each | score:   1.042 |
+           webapp w/Breve: | 250 total, 0 failed |   8.369s overall, 0.033s each | score:   1.045 |
+          bottle w/Django: | 250 total, 0 failed |   8.373s overall, 0.033s each | score:   1.045 |
+            tipfy w/Breve: | 250 total, 0 failed |   8.374s overall, 0.033s each | score:   1.045 |
+       bottle w/Templator: | 250 total, 0 failed |   8.403s overall, 0.034s each | score:   1.049 |
+         WSGI w/Templator: | 250 total, 0 failed |   8.423s overall, 0.034s each | score:   1.052 |
+  bottle w/SimpleTemplate: | 250 total, 0 failed |   8.425s overall, 0.034s each | score:   1.052 |
+      webop w/TenjinCache: | 250 total, 0 failed |   8.431s overall, 0.034s each | score:   1.053 |
+   webop w/SimpleTemplate: | 250 total, 0 failed |   8.446s overall, 0.034s each | score:   1.054 |
+            WSGI w/Django: | 250 total, 0 failed |   8.461s overall, 0.034s each | score:   1.056 |
+            flask w/Breve: | 250 total, 0 failed |   8.497s overall, 0.034s each | score:   1.061 |
+ webapp2 w/SimpleTemplate: | 250 total, 0 failed |   8.506s overall, 0.034s each | score:   1.062 |
+        webop w/Templator: | 250 total, 0 failed |   8.510s overall, 0.034s each | score:   1.062 |
+  web.py w/SimpleTemplate: | 250 total, 0 failed |   8.546s overall, 0.034s each | score:   1.067 |
+           bottle w/Breve: | 250 total, 0 failed |   8.546s overall, 0.034s each | score:   1.067 |
+          webapp2 w/Breve: | 250 total, 0 failed |   8.580s overall, 0.034s each | score:   1.071 |
+           tipfy w/Django: | 250 total, 0 failed |   8.580s overall, 0.034s each | score:   1.071 |
+           webop w/Django: | 250 total, 0 failed |   8.630s overall, 0.035s each | score:   1.077 |
+       webapp w/Templator: | 250 total, 0 failed |   8.713s overall, 0.035s each | score:   1.088 |
+            tipfy w/Jinja: | 250 total, 0 failed |   8.768s overall, 0.035s each | score:   1.095 |
+         webapp2 w/Tenjin: | 250 total, 0 failed |   8.836s overall, 0.035s each | score:   1.103 |
+             WSGI w/Jinja: | 250 total, 0 failed |   8.880s overall, 0.036s each | score:   1.109 |
+             tipfy w/Mako: | 250 total, 0 failed |   8.901s overall, 0.036s each | score:   1.111 |
+             WSGI w/Breve: | 250 total, 0 failed |   8.917s overall, 0.036s each | score:   1.113 |
+            webop w/Jinja: | 250 total, 0 failed |   8.920s overall, 0.036s each | score:   1.114 |
+              WSGI w/Mako: | 250 total, 0 failed |   8.921s overall, 0.036s each | score:   1.114 |
+             flask w/Mako: | 250 total, 0 failed |   8.958s overall, 0.036s each | score:   1.118 |
+           flask w/Django: | 250 total, 0 failed |   8.966s overall, 0.036s each | score:   1.119 |
+   flask w/SimpleTemplate: | 250 total, 0 failed |   9.064s overall, 0.036s each | score:   1.132 |
+           webapp2 w/Mako: | 250 total, 0 failed |   9.170s overall, 0.037s each | score:   1.145 |
+            bottle w/Mako: | 250 total, 0 failed |   9.174s overall, 0.037s each | score:   1.145 |
+            web.py w/Mako: | 250 total, 0 failed |   9.213s overall, 0.037s each | score:   1.150 |
+           bottle w/Jinja: | 250 total, 0 failed |   9.298s overall, 0.037s each | score:   1.161 |
+           webapp w/Jinja: | 250 total, 0 failed |   9.319s overall, 0.037s each | score:   1.163 |
+            webapp w/Mako: | 250 total, 0 failed |   9.376s overall, 0.038s each | score:   1.171 |
+          webapp2 w/Jinja: | 250 total, 0 failed |   9.400s overall, 0.038s each | score:   1.173 |
+           web.py w/Jinja: | 250 total, 0 failed |   9.620s overall, 0.038s each | score:   1.201 |
+             webop w/Mako: | 250 total, 0 failed |   9.657s overall, 0.039s each | score:   1.206 |
+
+
+Overhead 100:
+         webapp2 w/Tenjin: | 250 total, 0 failed |   8.308s overall, 0.033s each | score:   1.000 |
+        flask w/Templator: | 250 total, 0 failed |   8.329s overall, 0.033s each | score:   1.003 |
+       bottle w/Templator: | 250 total, 0 failed |   8.336s overall, 0.033s each | score:   1.003 |
+           tipfy w/Tenjin: | 250 total, 0 failed |   8.351s overall, 0.033s each | score:   1.005 |
+           flask w/Tenjin: | 250 total, 0 failed |   8.354s overall, 0.033s each | score:   1.006 |
+        tipfy w/Templator: | 250 total, 0 failed |   8.383s overall, 0.034s each | score:   1.009 |
+          web.py w/Tenjin: | 250 total, 0 failed |   8.434s overall, 0.034s each | score:   1.015 |
+          bottle w/Tenjin: | 250 total, 0 failed |   8.519s overall, 0.034s each | score:   1.025 |
+       web.py w/Templator: | 250 total, 0 failed |   8.609s overall, 0.034s each | score:   1.036 |
+            flask w/Jinja: | 250 total, 0 failed |   8.632s overall, 0.035s each | score:   1.039 |
+ webapp2 w/SimpleTemplate: | 250 total, 0 failed |   8.666s overall, 0.035s each | score:   1.043 |
+            WSGI w/Tenjin: | 250 total, 0 failed |   8.733s overall, 0.035s each | score:   1.051 |
+  bottle w/SimpleTemplate: | 250 total, 0 failed |   8.759s overall, 0.035s each | score:   1.054 |
+   tipfy w/SimpleTemplate: | 250 total, 0 failed |   8.776s overall, 0.035s each | score:   1.056 |
+      webop w/TenjinCache: | 250 total, 0 failed |   8.885s overall, 0.036s each | score:   1.069 |
+          webapp2 w/Jinja: | 250 total, 0 failed |   9.023s overall, 0.036s each | score:   1.086 |
+            webapp w/Mako: | 250 total, 0 failed |   9.054s overall, 0.036s each | score:   1.090 |
+           bottle w/Jinja: | 250 total, 0 failed |   9.068s overall, 0.036s each | score:   1.091 |
+           webop w/Django: | 250 total, 0 failed |   9.108s overall, 0.036s each | score:   1.096 |
+    WSGI w/SimpleTemplate: | 250 total, 0 failed |   9.279s overall, 0.037s each | score:   1.117 |
+  webapp w/SimpleTemplate: | 250 total, 0 failed |   9.301s overall, 0.037s each | score:   1.120 |
+            web.py w/Mako: | 250 total, 0 failed |   9.345s overall, 0.037s each | score:   1.125 |
+             webop w/Mako: | 250 total, 0 failed |   9.358s overall, 0.037s each | score:   1.126 |
+           tipfy w/Django: | 250 total, 0 failed |   9.432s overall, 0.038s each | score:   1.135 |
+           webapp2 w/Mako: | 250 total, 0 failed |   9.432s overall, 0.038s each | score:   1.135 |
+            bottle w/Mako: | 250 total, 0 failed |   9.483s overall, 0.038s each | score:   1.141 |
+         webapp2 w/Django: | 250 total, 0 failed |   9.526s overall, 0.038s each | score:   1.147 |
+          webapp w/Django: | 250 total, 0 failed |   9.586s overall, 0.038s each | score:   1.154 |
+           web.py w/Jinja: | 250 total, 0 failed |   9.623s overall, 0.038s each | score:   1.158 |
+           flask w/Django: | 250 total, 0 failed |   9.775s overall, 0.039s each | score:   1.177 |
+              WSGI w/Mako: | 250 total, 0 failed |   9.776s overall, 0.039s each | score:   1.177 |
+          web.py w/Django: | 250 total, 0 failed |   9.951s overall, 0.040s each | score:   1.198 |
+             flask w/Mako: | 250 total, 0 failed |  10.103s overall, 0.040s each | score:   1.216 |
+        webop w/Templator: | 250 total, 0 failed |  10.124s overall, 0.040s each | score:   1.219 |
+           webapp w/Breve: | 250 total, 0 failed |  10.338s overall, 0.041s each | score:   1.244 |
+  web.py w/SimpleTemplate: | 250 total, 0 failed |  10.350s overall, 0.041s each | score:   1.246 |
+            tipfy w/Jinja: | 250 total, 0 failed |  10.378s overall, 0.042s each | score:   1.249 |
+            tipfy w/Breve: | 250 total, 0 failed |  10.432s overall, 0.042s each | score:   1.256 |
+            webop w/Breve: | 250 total, 0 failed |  10.736s overall, 0.043s each | score:   1.292 |
+   webop w/SimpleTemplate: | 250 total, 0 failed |  10.750s overall, 0.043s each | score:   1.294 |
+       webapp w/Templator: | 250 total, 0 failed |  10.805s overall, 0.043s each | score:   1.301 |
+         WSGI w/Templator: | 250 total, 0 failed |  10.868s overall, 0.043s each | score:   1.308 |
+          webapp w/Tenjin: | 250 total, 0 failed |  10.920s overall, 0.044s each | score:   1.314 |
+           web.py w/Breve: | 250 total, 0 failed |  10.935s overall, 0.044s each | score:   1.316 |
+             WSGI w/Breve: | 250 total, 0 failed |  10.983s overall, 0.044s each | score:   1.322 |
+           webapp w/Jinja: | 250 total, 0 failed |  11.059s overall, 0.044s each | score:   1.331 |
+      webapp2 w/Templator: | 250 total, 0 failed |  11.261s overall, 0.045s each | score:   1.355 |
+   flask w/SimpleTemplate: | 250 total, 0 failed |  11.270s overall, 0.045s each | score:   1.356 |
+           webop w/Tenjin: | 250 total, 0 failed |  11.378s overall, 0.046s each | score:   1.370 |
+            webop w/Jinja: | 250 total, 0 failed |  11.411s overall, 0.046s each | score:   1.373 |
+             WSGI w/Jinja: | 250 total, 0 failed |  11.628s overall, 0.047s each | score:   1.400 |
+             tipfy w/Mako: | 250 total, 0 failed |  11.769s overall, 0.047s each | score:   1.417 |
+          bottle w/Django: | 250 total, 0 failed |  11.954s overall, 0.048s each | score:   1.439 |
+            flask w/Breve: | 250 total, 0 failed |  12.460s overall, 0.050s each | score:   1.500 |
+           bottle w/Breve: | 250 total, 0 failed |  12.783s overall, 0.051s each | score:   1.539 |
+          webapp2 w/Breve: | 250 total, 0 failed |  13.001s overall, 0.052s each | score:   1.565 |
+            WSGI w/Django: | 250 total, 0 failed |  17.549s overall, 0.070s each | score:   2.112 |
+
+
+Overhead 1000:
+            tipfy w/Jinja: | 250 total, 0 failed |   9.448s overall, 0.038s each | score:   1.000 |
+           webapp w/Jinja: | 250 total, 0 failed |   9.766s overall, 0.039s each | score:   1.034 |
+          webapp2 w/Jinja: | 250 total, 0 failed |   9.843s overall, 0.039s each | score:   1.042 |
+           bottle w/Jinja: | 250 total, 0 failed |   9.876s overall, 0.040s each | score:   1.045 |
+            webapp w/Mako: | 250 total, 0 failed |   9.877s overall, 0.040s each | score:   1.045 |
+             webop w/Mako: | 250 total, 0 failed |   9.905s overall, 0.040s each | score:   1.048 |
+            web.py w/Mako: | 250 total, 0 failed |   9.974s overall, 0.040s each | score:   1.056 |
+           webapp2 w/Mako: | 250 total, 0 failed |  10.004s overall, 0.040s each | score:   1.059 |
+            webop w/Jinja: | 250 total, 0 failed |  10.012s overall, 0.040s each | score:   1.060 |
+            bottle w/Mako: | 250 total, 0 failed |  10.042s overall, 0.040s each | score:   1.063 |
+             tipfy w/Mako: | 250 total, 0 failed |  10.096s overall, 0.040s each | score:   1.069 |
+           web.py w/Jinja: | 250 total, 0 failed |  10.161s overall, 0.041s each | score:   1.076 |
+        webop w/Templator: | 250 total, 0 failed |  10.184s overall, 0.041s each | score:   1.078 |
+             flask w/Mako: | 250 total, 0 failed |  10.295s overall, 0.041s each | score:   1.090 |
+       web.py w/Templator: | 250 total, 0 failed |  10.300s overall, 0.041s each | score:   1.090 |
+        flask w/Templator: | 250 total, 0 failed |  10.301s overall, 0.041s each | score:   1.090 |
+      webapp2 w/Templator: | 250 total, 0 failed |  10.341s overall, 0.041s each | score:   1.095 |
+       bottle w/Templator: | 250 total, 0 failed |  10.396s overall, 0.042s each | score:   1.100 |
+           webop w/Tenjin: | 250 total, 0 failed |  10.609s overall, 0.042s each | score:   1.123 |
+         webapp2 w/Tenjin: | 250 total, 0 failed |  10.619s overall, 0.042s each | score:   1.124 |
+           flask w/Tenjin: | 250 total, 0 failed |  10.637s overall, 0.043s each | score:   1.126 |
+        tipfy w/Templator: | 250 total, 0 failed |  10.642s overall, 0.043s each | score:   1.126 |
+          bottle w/Tenjin: | 250 total, 0 failed |  10.660s overall, 0.043s each | score:   1.128 |
+       webapp w/Templator: | 250 total, 0 failed |  10.750s overall, 0.043s each | score:   1.138 |
+           tipfy w/Tenjin: | 250 total, 0 failed |  10.756s overall, 0.043s each | score:   1.138 |
+          web.py w/Tenjin: | 250 total, 0 failed |  10.785s overall, 0.043s each | score:   1.142 |
+          webapp w/Tenjin: | 250 total, 0 failed |  10.869s overall, 0.043s each | score:   1.150 |
+      webop w/TenjinCache: | 250 total, 0 failed |  11.034s overall, 0.044s each | score:   1.168 |
+            flask w/Jinja: | 250 total, 0 failed |  13.772s overall, 0.055s each | score:   1.458 |
+   flask w/SimpleTemplate: | 250 total, 0 failed |  14.147s overall, 0.057s each | score:   1.497 |
+  webapp w/SimpleTemplate: | 250 total, 0 failed |  14.208s overall, 0.057s each | score:   1.504 |
+  web.py w/SimpleTemplate: | 250 total, 0 failed |  14.232s overall, 0.057s each | score:   1.506 |
+  bottle w/SimpleTemplate: | 250 total, 0 failed |  14.232s overall, 0.057s each | score:   1.506 |
+   webop w/SimpleTemplate: | 250 total, 0 failed |  14.298s overall, 0.057s each | score:   1.513 |
+ webapp2 w/SimpleTemplate: | 250 total, 0 failed |  14.316s overall, 0.057s each | score:   1.515 |
+   tipfy w/SimpleTemplate: | 250 total, 0 failed |  14.409s overall, 0.058s each | score:   1.525 |
+              WSGI w/Mako: | 250 total, 0 failed |  15.092s overall, 0.060s each | score:   1.597 |
+         WSGI w/Templator: | 250 total, 0 failed |  15.229s overall, 0.061s each | score:   1.612 |
+            WSGI w/Tenjin: | 250 total, 0 failed |  15.581s overall, 0.062s each | score:   1.649 |
+             WSGI w/Jinja: | 250 total, 0 failed |  16.018s overall, 0.064s each | score:   1.695 |
+          webapp w/Django: | 250 total, 0 failed |  17.805s overall, 0.071s each | score:   1.885 |
+         webapp2 w/Django: | 250 total, 0 failed |  17.836s overall, 0.071s each | score:   1.888 |
+           tipfy w/Django: | 250 total, 0 failed |  17.853s overall, 0.071s each | score:   1.890 |
+           webop w/Django: | 250 total, 0 failed |  17.927s overall, 0.072s each | score:   1.898 |
+          bottle w/Django: | 250 total, 0 failed |  17.989s overall, 0.072s each | score:   1.904 |
+           flask w/Django: | 250 total, 0 failed |  19.377s overall, 0.078s each | score:   2.051 |
+    WSGI w/SimpleTemplate: | 250 total, 0 failed |  19.472s overall, 0.078s each | score:   2.061 |
+          web.py w/Django: | 250 total, 0 failed |  19.530s overall, 0.078s each | score:   2.067 |
+            WSGI w/Django: | 250 total, 0 failed |  23.826s overall, 0.095s each | score:   2.522 |
+          webapp2 w/Breve: | 250 total, 0 failed |  31.924s overall, 0.128s each | score:   3.379 |
+           bottle w/Breve: | 250 total, 0 failed |  33.048s overall, 0.132s each | score:   3.498 |
+           webapp w/Breve: | 250 total, 0 failed |  33.063s overall, 0.132s each | score:   3.500 |
+           web.py w/Breve: | 250 total, 0 failed |  33.123s overall, 0.132s each | score:   3.506 |
+            tipfy w/Breve: | 250 total, 0 failed |  33.138s overall, 0.133s each | score:   3.508 |
+            flask w/Breve: | 250 total, 0 failed |  33.375s overall, 0.133s each | score:   3.533 |
+            webop w/Breve: | 250 total, 0 failed |  33.678s overall, 0.135s each | score:   3.565 |
+             WSGI w/Breve: | 250 total, 0 failed |  37.616s overall, 0.150s each | score:   3.982 |
+
+
+Overhead 10000:
+            tipfy w/Jinja: | 250 total, 0 failed |  17.443s overall, 0.070s each | score:   1.000 |
+           web.py w/Jinja: | 250 total, 0 failed |  18.060s overall, 0.072s each | score:   1.035 |
+           webapp w/Jinja: | 250 total, 0 failed |  18.092s overall, 0.072s each | score:   1.037 |
+            webop w/Jinja: | 250 total, 0 failed |  18.131s overall, 0.073s each | score:   1.039 |
+           bottle w/Jinja: | 250 total, 0 failed |  18.378s overall, 0.074s each | score:   1.054 |
+          webapp2 w/Jinja: | 250 total, 0 failed |  18.767s overall, 0.075s each | score:   1.076 |
+             flask w/Mako: | 250 total, 0 failed |  19.328s overall, 0.077s each | score:   1.108 |
+           webapp2 w/Mako: | 250 total, 0 failed |  19.529s overall, 0.078s each | score:   1.120 |
+             webop w/Mako: | 250 total, 0 failed |  19.770s overall, 0.079s each | score:   1.133 |
+            bottle w/Mako: | 250 total, 0 failed |  19.777s overall, 0.079s each | score:   1.134 |
+            webapp w/Mako: | 250 total, 0 failed |  19.863s overall, 0.079s each | score:   1.139 |
+             tipfy w/Mako: | 250 total, 0 failed |  20.144s overall, 0.081s each | score:   1.155 |
+            web.py w/Mako: | 250 total, 0 failed |  20.545s overall, 0.082s each | score:   1.178 |
+      webapp2 w/Templator: | 250 total, 0 failed |  30.258s overall, 0.121s each | score:   1.735 |
+        flask w/Templator: | 250 total, 0 failed |  31.012s overall, 0.124s each | score:   1.778 |
+        webop w/Templator: | 250 total, 0 failed |  31.027s overall, 0.124s each | score:   1.779 |
+       web.py w/Templator: | 250 total, 0 failed |  31.127s overall, 0.125s each | score:   1.784 |
+       webapp w/Templator: | 250 total, 0 failed |  31.293s overall, 0.125s each | score:   1.794 |
+        tipfy w/Templator: | 250 total, 0 failed |  31.308s overall, 0.125s each | score:   1.795 |
+       bottle w/Templator: | 250 total, 0 failed |  31.358s overall, 0.125s each | score:   1.798 |
+          bottle w/Tenjin: | 250 total, 0 failed |  33.679s overall, 0.135s each | score:   1.931 |
+           flask w/Tenjin: | 250 total, 0 failed |  33.810s overall, 0.135s each | score:   1.938 |
+         webapp2 w/Tenjin: | 250 total, 0 failed |  33.819s overall, 0.135s each | score:   1.939 |
+           tipfy w/Tenjin: | 250 total, 0 failed |  34.003s overall, 0.136s each | score:   1.949 |
+           webop w/Tenjin: | 250 total, 0 failed |  34.163s overall, 0.137s each | score:   1.959 |
+          webapp w/Tenjin: | 250 total, 0 failed |  34.192s overall, 0.137s each | score:   1.960 |
+      webop w/TenjinCache: | 250 total, 0 failed |  34.585s overall, 0.138s each | score:   1.983 |
+          web.py w/Tenjin: | 250 total, 0 failed |  35.187s overall, 0.141s each | score:   2.017 |
+            flask w/Jinja: | 250 total, 0 failed |  63.565s overall, 0.254s each | score:   3.644 |
+   flask w/SimpleTemplate: | 250 total, 0 failed |  68.508s overall, 0.274s each | score:   3.927 |
+  bottle w/SimpleTemplate: | 250 total, 0 failed |  68.967s overall, 0.276s each | score:   3.954 |
+  webapp w/SimpleTemplate: | 250 total, 0 failed |  69.142s overall, 0.277s each | score:   3.964 |
+   tipfy w/SimpleTemplate: | 250 total, 0 failed |  69.150s overall, 0.277s each | score:   3.964 |
+  web.py w/SimpleTemplate: | 250 total, 0 failed |  69.300s overall, 0.277s each | score:   3.973 |
+   webop w/SimpleTemplate: | 250 total, 0 failed |  69.825s overall, 0.279s each | score:   4.003 |
+ webapp2 w/SimpleTemplate: | 250 total, 0 failed |  70.505s overall, 0.282s each | score:   4.042 |
+              WSGI w/Mako: | 250 total, 0 failed |  73.386s overall, 0.294s each | score:   4.207 |
+             WSGI w/Jinja: | 250 total, 0 failed |  82.383s overall, 0.330s each | score:   4.723 |
+            WSGI w/Tenjin: | 250 total, 0 failed |  82.646s overall, 0.331s each | score:   4.738 |
+         WSGI w/Templator: | 250 total, 0 failed |  83.031s overall, 0.332s each | score:   4.760 |
+           tipfy w/Django: | 250 total, 0 failed | 103.509s overall, 0.414s each | score:   5.934 |
+          webapp w/Django: | 250 total, 0 failed | 103.774s overall, 0.415s each | score:   5.949 |
+           webop w/Django: | 250 total, 0 failed | 103.899s overall, 0.416s each | score:   5.956 |
+          bottle w/Django: | 250 total, 0 failed | 104.049s overall, 0.416s each | score:   5.965 |
+         webapp2 w/Django: | 250 total, 0 failed | 105.814s overall, 0.423s each | score:   6.066 |
+           flask w/Django: | 250 total, 0 failed | 120.088s overall, 0.480s each | score:   6.884 |
+          web.py w/Django: | 250 total, 0 failed | 120.602s overall, 0.482s each | score:   6.914 |
+    WSGI w/SimpleTemplate: | 250 total, 0 failed | 123.469s overall, 0.494s each | score:   7.078 |
+            WSGI w/Django: | 250 total, 0 failed | 165.366s overall, 0.661s each | score:   9.480 |
+            tipfy w/Breve: | 250 total, 0 failed | 277.025s overall, 1.108s each | score:  15.882 |
+           bottle w/Breve: | 250 total, 0 failed | 277.659s overall, 1.111s each | score:  15.918 |
+           webapp w/Breve: | 250 total, 0 failed | 277.761s overall, 1.111s each | score:  15.924 |
+            flask w/Breve: | 250 total, 0 failed | 277.798s overall, 1.111s each | score:  15.926 |
+          webapp2 w/Breve: | 250 total, 0 failed | 277.908s overall, 1.112s each | score:  15.932 |
+            webop w/Breve: | 250 total, 0 failed | 278.462s overall, 1.114s each | score:  15.964 |
+           web.py w/Breve: | 250 total, 0 failed | 280.771s overall, 1.123s each | score:  16.096 |
+             WSGI w/Breve: | 250 total, 0 failed | 322.645s overall, 1.291s each | score:  18.497 |
+
+
+Totals:
+            tipfy w/Jinja: |  46.037 seconds overall | score:   4.344 |
+           bottle w/Jinja: |  46.621 seconds overall | score:   4.351 |
+          webapp2 w/Jinja: |  47.033 seconds overall | score:   4.377 |
+            webapp w/Mako: |  48.170 seconds overall | score:   4.444 |
+           webapp2 w/Mako: |  48.135 seconds overall | score:   4.459 |
+           web.py w/Jinja: |  47.464 seconds overall | score:   4.470 |
+            bottle w/Mako: |  48.476 seconds overall | score:   4.483 |
+            web.py w/Mako: |  49.078 seconds overall | score:   4.509 |
+             webop w/Mako: |  48.690 seconds overall | score:   4.514 |
+             flask w/Mako: |  48.684 seconds overall | score:   4.532 |
+           webapp w/Jinja: |  48.236 seconds overall | score:   4.565 |
+            webop w/Jinja: |  48.474 seconds overall | score:   4.586 |
+             tipfy w/Mako: |  50.910 seconds overall | score:   4.751 |
+        flask w/Templator: |  57.729 seconds overall | score:   4.880 |
+       web.py w/Templator: |  58.095 seconds overall | score:   4.917 |
+       bottle w/Templator: |  58.493 seconds overall | score:   4.950 |
+        tipfy w/Templator: |  58.619 seconds overall | score:   4.965 |
+          bottle w/Tenjin: |  60.910 seconds overall | score:   5.090 |
+           flask w/Tenjin: |  60.982 seconds overall | score:   5.091 |
+           tipfy w/Tenjin: |  61.151 seconds overall | score:   5.097 |
+        webop w/Templator: |  59.846 seconds overall | score:   5.138 |
+         webapp2 w/Tenjin: |  61.583 seconds overall | score:   5.166 |
+      webapp2 w/Templator: |  59.999 seconds overall | score:   5.201 |
+          web.py w/Tenjin: |  62.644 seconds overall | score:   5.202 |
+      webop w/TenjinCache: |  62.935 seconds overall | score:   5.273 |
+       webapp w/Templator: |  61.561 seconds overall | score:   5.320 |
+          webapp w/Tenjin: |  64.110 seconds overall | score:   5.440 |
+           webop w/Tenjin: |  64.214 seconds overall | score:   5.458 |
+            flask w/Jinja: |  94.094 seconds overall | score:   7.155 |
+  bottle w/SimpleTemplate: | 100.383 seconds overall | score:   7.566 |
+   tipfy w/SimpleTemplate: | 100.620 seconds overall | score:   7.580 |
+  webapp w/SimpleTemplate: | 100.676 seconds overall | score:   7.589 |
+ webapp2 w/SimpleTemplate: | 101.993 seconds overall | score:   7.662 |
+  web.py w/SimpleTemplate: | 102.427 seconds overall | score:   7.792 |
+   webop w/SimpleTemplate: | 103.319 seconds overall | score:   7.865 |
+   flask w/SimpleTemplate: | 102.988 seconds overall | score:   7.913 |
+              WSGI w/Mako: | 107.175 seconds overall | score:   8.095 |
+            WSGI w/Tenjin: | 115.062 seconds overall | score:   8.450 |
+         WSGI w/Templator: | 117.551 seconds overall | score:   8.732 |
+             WSGI w/Jinja: | 118.910 seconds overall | score:   8.927 |
+          webapp w/Django: | 139.362 seconds overall | score:  10.011 |
+           webop w/Django: | 139.565 seconds overall | score:  10.028 |
+           tipfy w/Django: | 139.374 seconds overall | score:  10.030 |
+         webapp2 w/Django: | 141.372 seconds overall | score:  10.124 |
+          bottle w/Django: | 142.366 seconds overall | score:  10.353 |
+          web.py w/Django: | 158.382 seconds overall | score:  11.215 |
+           flask w/Django: | 158.205 seconds overall | score:  11.231 |
+    WSGI w/SimpleTemplate: | 160.230 seconds overall | score:  11.256 |
+            WSGI w/Django: | 215.202 seconds overall | score:  15.171 |
+            tipfy w/Breve: | 328.969 seconds overall | score:  21.690 |
+           webapp w/Breve: | 329.532 seconds overall | score:  21.713 |
+            webop w/Breve: | 331.226 seconds overall | score:  21.863 |
+          webapp2 w/Breve: | 331.413 seconds overall | score:  21.947 |
+           web.py w/Breve: | 333.158 seconds overall | score:  21.958 |
+            flask w/Breve: | 332.130 seconds overall | score:  22.019 |
+           bottle w/Breve: | 332.036 seconds overall | score:  22.021 |
+             WSGI w/Breve: | 380.161 seconds overall | score:  24.914 |
+
+Templating Engines:
+           Mako: | 449.319s overall | score:   1.000 |
+          Jinja: | 496.868s overall | score:   1.106 |
+      Templator: | 531.893s overall | score:   1.184 |
+         Tenjin: | 550.656s overall | score:   1.226 |
+ SimpleTemplate: | 872.636s overall | score:   1.942 |
+         Django: | 1233.827s overall | score:   2.746 |
+          Breve: | 2698.625s overall | score:   6.006 |
+
+Web Application Frameworks:
+          tipfy: | 785.679s overall | score:   1.000 |
+         Bottle: | 789.286s overall | score:   1.005 |
+        webapp2: | 791.528s overall | score:   1.007 |
+         webapp: | 791.646s overall | score:   1.008 |
+          webob: | 795.334s overall | score:   1.012 |
+         wep.py: | 811.248s overall | score:   1.033 |
+          Flask: | 854.812s overall | score:   1.088 |
+           WSGI: | 1214.291s overall | score:   1.546 |
+
+Default Configurations:
+            tipfy w/Jinja: |  46.037s overall | score:   1.000 |
+       web.py w/Templator: |  58.095s overall | score:   1.262 |
+            flask w/Jinja: |  94.094s overall | score:   2.044 |
+  bottle w/SimpleTemplate: | 100.383s overall | score:   2.181 |
+          webapp w/Django: | 139.362s overall | score:   3.027 |
+
