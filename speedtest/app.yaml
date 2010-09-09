@@ -19,6 +19,9 @@ handlers:
 - url: /bottletenjin/.*
   script: /app/bottleTenjin/bottleTenjinTest.py
   
+- url: /bottletenjcache/.*
+  script: /app/bottleTenjinCache/bottleTenjinCacheTest.py
+  
 - url: /bottlebreve/.*
   script: /app/bottleBreve/bottleBreveTest.py
   
@@ -46,6 +49,9 @@ handlers:
 - url: /webpytenjin/.*
   script: /app/webpytenjin/webpyTenjinTest.py
   
+- url: /webpytenjcache/.*
+  script: /app/webpytenjinCache/webpyTenjinCacheTest.py
+  
 - url: /webappdjango/.*
   script: /app/gnative/gnative.py
   
@@ -60,6 +66,9 @@ handlers:
   
 - url: /webapptenjin/.*
   script: /app/gtenjin/gTenjinTest.py
+  
+- url: /webapptenjcache/.*
+  script: /app/gtenjinCache/gTenjinCacheTest.py
   
 - url: /webapptemplator/.*
   script: /app/gtemplator/gTestTemplator.py
@@ -82,6 +91,9 @@ handlers:
 - url: /flasktenjin/.*
   script: /app/flaskTenjin/flaskTenjinTest.py
   
+- url: /flasktenjcache/.*
+  script: /app/flaskTenjinCache/flaskTenjinCacheTest.py
+  
 - url: /flasktemplator/.*
   script: /app/flaskTemplator/flaskTestTemplator.py
   
@@ -102,6 +114,9 @@ handlers:
   
 - url: /tipfytenjin/.*
   script: /app/tipfyTenjin/tipfyTenjinTest.py
+  
+- url: /tipfytenjcache/.*
+  script: /app/tipfyTenjinCache/tipfyTenjinCacheTest.py
   
 - url: /tipfytemplator/.*
   script: /app/tipfyTemplator/tipfyTestTemplator.py
@@ -130,7 +145,7 @@ handlers:
 - url: /webobtenjin/.*
   script: /app/webobTenjin/webobTestTenjin.py
   
-- url: /wbbtenjcache/.*
+- url: /webobtenjcache/.*
   script: /app/webobTenjinCache/webobTestTenjinCache.py
   
 - url: /wsgibreve/.*
@@ -154,6 +169,9 @@ handlers:
 - url: /wsgitenjin/.*
   script: /app/wsgiTenjin/wsgiTestTenjin.py
   
+- url: /wsgitenjcache/.*
+  script: /app/wsgiTenjinCache/wsgiTestTenjinCache.py
+  
 - url: /web2django/.*
   script: /app/g2native/g2native.py
 
@@ -168,10 +186,14 @@ handlers:
 
 - url: /web2tenjin/.*
   script: /app/g2tenjin/g2TenjinTest.py
+  
+- url: /web2tenjcache/.*
+  script: /app/g2tenjinCache/g2TenjinCacheTest.py
 
 - url: /web2templator/.*
   script: /app/g2templator/g2TestTemplator.py
 
 - url: /web2breve/.*
   script: /app/g2breve/g2BreveTest.py
+  
   

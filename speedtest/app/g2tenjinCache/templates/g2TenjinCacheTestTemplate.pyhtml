@@ -1,0 +1,10 @@
+<html>
+<body>
+	<table>
+	<?py for i in range(numA): ?>
+	<?py    rez = i * numB ?>
+	    <tr><td>${i}</td><td>x ${numB}</td><td>= ${rez}</td></tr>
+	<?py #endfor ?>
+	</table>
+</body>
+</html>

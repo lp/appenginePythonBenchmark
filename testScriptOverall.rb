@@ -101,13 +101,13 @@ $results = {
   'tipfysimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/SimpleTemplate"},
   'tipfytenjin' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Tenjin"},
   'tipfytemplator' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Templator"},
-  'webobjinja' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Jinja"},
-  'webobbreve' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Breve"},
-  'webobdjango' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Django"},
-  'webobmako' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Mako"},
-  'webobsimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "webop w/SimpleTemplate"},
-  'webobtenjin' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Tenjin"},
-  'webobtemplator' => {:exectime => 0.0, :total => 0.0, :name => "webop w/Templator"},
+  'webobjinja' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Jinja"},
+  'webobbreve' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Breve"},
+  'webobdjango' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Django"},
+  'webobmako' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Mako"},
+  'webobsimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "webob w/SimpleTemplate"},
+  'webobtenjin' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Tenjin"},
+  'webobtemplator' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Templator"},
   'wsgijinja' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Jinja"},
   'wsgibreve' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Breve"},
   'wsgidjango' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Django"},
@@ -115,11 +115,11 @@ $results = {
   'wsgisimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/SimpleTemplate"},
   'wsgitenjin' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Tenjin"},
   'wsgitemplator' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Templator"},
-  'wbbtenjcache' => {:exectime => 0.0, :total => 0.0, :name => "webop w/TenjinCache"}
+  'wbbtenjcache' => {:exectime => 0.0, :total => 0.0, :name => "webob w/TenjinCache"}
 }
 
-[10,100,1000].each do |rows|
-  runTest(25,rows)
+[10,100,1000,10000].each do |rows|
+  runTest(250,rows)
 end
 
 puts "Totals:"
@@ -173,6 +173,7 @@ frames.each_value.sort.each_with_index do |v,i|
     rank = v / best
   end
   k = "wep.py" if k == "webpy"
+  k = "webapp2" if k == "web2"
   printf("%15s: | %7.3fs overall | score: %7.3f |\n", k, v, rank)
 end
 puts
