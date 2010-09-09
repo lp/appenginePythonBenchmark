@@ -64,6 +64,7 @@ $results = {
   'bottlejinja' => {:exectime => 0.0, :total => 0.0, :name => "bottle w/Jinja"},
   'bottlemako' => {:exectime => 0.0, :total => 0.0, :name => "bottle w/Mako"},
   'bottletenjin' => {:exectime => 0.0, :total => 0.0, :name => "bottle w/Tenjin"},
+  'bottletenjcache' => {:exectime => 0.0, :total => 0.0, :name => "bottle w/TenjinCache"},
   'bottletemplator' => {:exectime => 0.0, :total => 0.0, :name => "bottle w/Templator"},
   'webappbreve' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/Breve"},
   'webappmako' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/Mako"},
@@ -71,6 +72,7 @@ $results = {
   'webappjinja' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/Jinja"},
   'webappsimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/SimpleTemplate"},
   'webapptenjin' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/Tenjin"},
+  'webapptenjcache' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/TenjinCache"},
   'webapptemplator' => {:exectime => 0.0, :total => 0.0, :name => "webapp w/Templator"},
   'webpytemplator' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Templator"},
   'web2breve' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Breve"},
@@ -79,6 +81,7 @@ $results = {
   'web2jinja' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Jinja"},
   'web2simpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/SimpleTemplate"},
   'web2tenjin' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Tenjin"},
+  'web2tenjcache' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/TenjinCache"},
   'web2templator' => {:exectime => 0.0, :total => 0.0, :name => "webapp2 w/Templator"},
   'webpytemplator' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Templator"},
   'webpybreve' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Breve"},
@@ -87,12 +90,14 @@ $results = {
   'webpymako' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Mako"},
   'webpysimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/SimpleTemplate"},
   'webpytenjin' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/Tenjin"},
+  'webpytenjcache' => {:exectime => 0.0, :total => 0.0, :name => "web.py w/TenjinCache"},
   'flaskjinja' => {:exectime => 0.0, :total => 0.0, :name => "flask w/Jinja"},
   'flaskbreve' => {:exectime => 0.0, :total => 0.0, :name => "flask w/Breve"},
   'flaskdjango' => {:exectime => 0.0, :total => 0.0, :name => "flask w/Django"},
   'flaskmako' => {:exectime => 0.0, :total => 0.0, :name => "flask w/Mako"},
   'flasksimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "flask w/SimpleTemplate"},
   'flasktenjin' => {:exectime => 0.0, :total => 0.0, :name => "flask w/Tenjin"},
+  'flasktenjcache' => {:exectime => 0.0, :total => 0.0, :name => "flask w/TenjinCache"},
   'flasktemplator' => {:exectime => 0.0, :total => 0.0, :name => "flask w/Templator"},
   'tipfyjinja' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Jinja"},
   'tipfybreve' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Breve"},
@@ -100,6 +105,7 @@ $results = {
   'tipfymako' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Mako"},
   'tipfysimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/SimpleTemplate"},
   'tipfytenjin' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Tenjin"},
+  'tipfytenjcache' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/TenjinCache"},
   'tipfytemplator' => {:exectime => 0.0, :total => 0.0, :name => "tipfy w/Templator"},
   'webobjinja' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Jinja"},
   'webobbreve' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Breve"},
@@ -107,6 +113,7 @@ $results = {
   'webobmako' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Mako"},
   'webobsimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "webob w/SimpleTemplate"},
   'webobtenjin' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Tenjin"},
+  'webobtenjcache' => {:exectime => 0.0, :total => 0.0, :name => "webob w/TenjinCache"},
   'webobtemplator' => {:exectime => 0.0, :total => 0.0, :name => "webob w/Templator"},
   'wsgijinja' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Jinja"},
   'wsgibreve' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Breve"},
@@ -114,8 +121,8 @@ $results = {
   'wsgimako' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Mako"},
   'wsgisimpletemplate' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/SimpleTemplate"},
   'wsgitenjin' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Tenjin"},
+  'wsgitenjcache' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/TenjinCache"},
   'wsgitemplator' => {:exectime => 0.0, :total => 0.0, :name => "WSGI w/Templator"},
-  'wbbtenjcache' => {:exectime => 0.0, :total => 0.0, :name => "webob w/TenjinCache"}
 }
 
 [10,100,1000,10000].each do |rows|
@@ -129,7 +136,7 @@ end
 puts
 
 puts "Templating Engines:"
-engines = {"Mako" => 0.0, "Jinja" => 0.0, "Django" => 0.0, "Templator" => 0.0, "Tenjin" => 0.0, "Breve" => 0.0, "SimpleTemplate" => 0.0}
+engines = {"Mako" => 0.0, "Jinja" => 0.0, "Django" => 0.0, "Templator" => 0.0, "Tenjin" => 0.0, "tenjcache" => 0.0, "Breve" => 0.0, "SimpleTemplate" => 0.0}
 $results.each do |k,v|
   engines.each do |ek,ev|
     if k.include? ek.downcase
@@ -148,6 +155,7 @@ engines.each_value.sort.each_with_index do |v,i|
   else
     rank = v / best
   end
+  k = "TenjinCache" if k == "tenjcache"
   printf("%15s: | %7.3fs overall | score: %7.3f |\n", k, v, rank)
 end
 puts

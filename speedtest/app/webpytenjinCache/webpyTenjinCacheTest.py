@@ -5,16 +5,17 @@ from tenjin.helpers import *
 tenjin.gae.init()
 web.config.debug = False
 urls = (
-	'/webpytenjin/(.*)/(.*)',	'index'
+	'/webpytenjcache/(.*)/(.*)',	'index'
 )
 app = web.application(urls, globals())
 
 class index:
   def GET(self,numA,numB):
     context = { 'numA' : int(numA), 'numB' : int(numB)}
-    return tenjin.Engine(path=[
-    os.path.join(os.path.dirname(__file__),"templates")]
-      ).render('webpyTenjinTestTemplate.pyhtml',context)
+    return tenjin.Engine(
+      cache=tenjin.GaeMemcacheCacheStorage(),
+      path=[os.path.join(os.path.dirname(__file__),"templates")]
+    ).render('webpyTenjinCacheTestTemplate.pyhtml',context)
     
 def main():
   util.run_wsgi_app(app.wsgifunc())
